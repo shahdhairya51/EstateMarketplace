@@ -5,7 +5,9 @@ import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Header from "./components/Header";
+import CreateListing from "./pages/CreateListing";   // Custom page for creating a new listing.
 import PrivateRoute from "./components/PrivateRoute";  // Custom private route component to check authentication state.
+
 
 export default function App() {
     return (
@@ -18,6 +20,7 @@ export default function App() {
       <Route path = "/about" element ={<About />} />
       <Route element = {<PrivateRoute />}>  {/* Only authenticated users can access this route */}
       <Route path = "/profile" element ={<Profile />} />
+      <Route path = "/create-listing" element ={<CreateListing />} />
       </Route>
     </Routes>
 
